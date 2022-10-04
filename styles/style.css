@@ -1,0 +1,289 @@
+@font-face {
+  font-family: "mulish-italic";
+  src: url("../Mulish/Mulish-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "mulish";
+  src: url("../Mulish/Mulish-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "mulish-bold";
+  src: url("../Mulish/static/Mulish-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "mulish-semi-bold";
+  src: url("../Mulish/static/Mulish-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "mulish-extra-bold";
+  src: url("../Mulish/static/Mulish-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "mulish-black";
+  src: url("../Mulish/static/Mulish-Black.ttf") format("truetype");
+}
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+  height: 554px;
+  width: 100%;
+  background: rgb(61, 46, 128);
+  background: linear-gradient(173deg, rgb(61, 46, 128) 50%, rgb(164, 33, 113) 100%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  header {
+    height: 409px;
+  }
+}
+header .heading-box {
+  max-width: 700px;
+  margin: auto;
+}
+header .heading-box h1 {
+  color: #fff;
+  font-size: 50px;
+  max-width: 700px;
+  font-family: "mulish-extra-bold";
+}
+@media (max-width: 576px) {
+  header .heading-box h1 {
+    font-size: 30px;
+  }
+}
+header .logo-box,
+header .button-box {
+  position: absolute;
+}
+header .logo-box {
+  top: 10%;
+  left: 15%;
+}
+header .logo-box .logo-svg {
+  width: 144px;
+}
+header .button-box {
+  top: 10%;
+  right: 15%;
+}
+@media (max-width: 576px) {
+  header .button-box {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: auto;
+    width: 80%;
+  }
+}
+header .button-box .interested-in {
+  background-color: #ee325c;
+  color: #fff;
+  font-size: 14px;
+  font-family: "mulish-extra-bold";
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+header .button-box .interested-in:hover {
+  transform: scale(1.02);
+  background-color: #bb2748;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+.fast-progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  padding: 3%;
+}
+.fast-progress .card {
+  width: 45%;
+  min-width: 280px;
+  padding: 10px;
+  margin-right: 2.5%;
+  margin-bottom: 10%;
+}
+.fast-progress .fast-first h1 {
+  font-size: 48px;
+  font-family: "mulish-bold";
+}
+.fast-progress .fast-first h1 span {
+  font-size: 48px;
+  font-family: "mulish-bold";
+  border-bottom: 10px solid rgba(238, 50, 91, 0.2235294118);
+}
+.fast-progress .fast-first p {
+  margin-top: 30px;
+  font-size: 24px;
+}
+.fast-progress .fast-first p span {
+  font-family: "mulish-extra-bold";
+}
+.fast-progress .fast-second .partners img {
+  width: 75%;
+  margin-left: 10%;
+}
+.fast-progress .fast-second .points ul {
+  margin-top: 20px;
+}
+.fast-progress .fast-second .points ul li {
+  list-style: none;
+  font-size: 18px;
+  font-family: "mulish-semi-bold";
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+.fast-progress .fast-second .points ul li svg {
+  position: relative;
+  margin-right: 10px;
+  width: 18px;
+}
+.fast-progress .fast-third-motto p {
+  font-size: 22px;
+}
+.fast-progress .fast-third-motto p span {
+  font-family: "mulish-black";
+}
+.fast-progress .fast-fourth-button .interested-in {
+  background-color: #ee325c;
+  color: #fff;
+  font-size: 20px;
+  font-family: "mulish-bold";
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 380px;
+  height: 72px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.fast-progress .fast-fourth-button .interested-in:hover {
+  transform: scale(1.02);
+  background-color: #bb2748;
+}
+.fast-progress .quotation {
+  position: relative;
+  padding: 3%;
+}
+.fast-progress .quotation .quotation-text {
+  border: 2px solid #d6d8dd;
+  font-family: "mulish";
+  font-size: 16px;
+  line-height: 32px;
+  padding: 30px;
+}
+.fast-progress .quotation .quotation-text a {
+  font-size: 16px;
+  font-family: "mulish-bold";
+  color: #ee325c;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.fast-progress .quotation .quotation-text a:hover {
+  color: #bb2748;
+}
+.fast-progress .quotation .quotation-mark {
+  position: absolute;
+  top: 0px;
+  left: 45px;
+}
+.fast-progress .quotation .quotation-autor {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.fast-progress .quotation .quotation-autor svg {
+  width: 64px;
+  margin-right: 30px;
+}
+.fast-progress .quotation .quotation-autor h3 {
+  font-size: 16px;
+  font-family: "mulish-black";
+}
+.fast-progress .quotation .quotation-autor p {
+  font-size: 16px;
+  font-family: "mulish";
+}
+.fast-progress .quotation .quotation-autor p a {
+  font-family: "mulish-bold";
+  color: #ee325c;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.fast-progress .quotation .quotation-autor p a:hover {
+  color: #bb2748;
+}
+
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 721px;
+  width: 100%;
+  text-align: center;
+  background: rgb(61, 46, 128);
+  background: linear-gradient(160deg, rgb(61, 46, 128) 40%, rgb(164, 33, 113) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer h1 {
+  font-size: 48px;
+  color: #fff;
+  font-family: "mulish-black";
+  margin: 55px;
+  max-width: 42%;
+}
+footer .contact-wrap {
+  margin: 55px;
+}
+footer .contact-wrap a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "mulish-bold";
+}
+footer .contact-wrap .tel {
+  color: #fff;
+  margin-right: 20px;
+  transition: all 0.5s ease-out;
+}
+footer .contact-wrap .tel:hover {
+  text-decoration: underline;
+  color: rgba(238, 50, 91, 0.5803921569);
+}
+footer .contact-wrap .email {
+  color: #ee325c;
+  transition: all 0.5s ease-out;
+}
+footer .contact-wrap .email:hover {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.543);
+}
+footer svg {
+  width: 275px;
+  margin: 55px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "mulish";
+}
+
+body {
+  min-width: 320px;
+}/*# sourceMappingURL=style.css.map */

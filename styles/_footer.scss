@@ -1,0 +1,60 @@
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 721px;
+  width: 100%;
+  text-align: center;
+  background: rgb(61, 46, 128);
+  background: linear-gradient(
+    160deg,
+    rgba(61, 46, 128, 1) 40%,
+    rgba(164, 33, 113, 1) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 48px;
+    color: #fff;
+    font-family: "mulish-black";
+    margin: 55px;
+    max-width: 42%;
+  }
+
+  .contact-wrap {
+    margin: 55px;
+
+    a {
+      text-decoration: none;
+      font-size: 30px;
+      font-family: "mulish-bold";
+    }
+    .tel {
+      color: #fff;
+      margin-right: 20px;
+      transition: all 0.5s ease-out;
+      &:hover {
+        text-decoration: underline;
+        color: #ee325b94;
+      }
+    }
+
+    .email {
+      color: #ee325c;
+      transition: all 0.5s ease-out;
+      &:hover {
+        text-decoration: underline;
+        color: rgba(255, 255, 255, 0.543);
+      }
+    }
+  }
+
+  svg {
+    width: 275px;
+    margin: 55px;
+  }
+}

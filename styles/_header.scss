@@ -1,0 +1,105 @@
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+  height: 554px;
+  width: 100%;
+  background: rgb(61, 46, 128);
+  background: linear-gradient(
+    173deg,
+    rgba(61, 46, 128, 1) 50%,
+    rgba(164, 33, 113, 1) 100%
+  );
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    height: 409px;
+  }
+
+  .heading-box {
+    max-width: 700px;
+    margin: auto;
+    h1 {
+      color: #fff;
+      font-size: 50px;
+      max-width: 700px;
+      font-family: "mulish-extra-bold";
+
+      //   media query
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .logo-box,
+  .button-box {
+    position: absolute;
+  }
+
+  .logo-box {
+    top: 10%;
+    left: 15%;
+
+    .logo-svg {
+      width: 144px;
+    }
+  }
+
+  .button-box {
+    top: 10%;
+    right: 15%;
+    @include mobile {
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: auto;
+      width: 80%;
+    }
+
+    .interested-in {
+      background-color: #ee325c;
+      color: #fff;
+      font-size: 14px;
+      font-family: "mulish-extra-bold";
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: all 0.5s ease-out;
+      &:hover {
+        transform: scale(1.02);
+        background-color: #bb2748;
+      }
+    }
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+// @media (max-width: 576px) {
+//   .heading-box {
+//     h1 {
+//       font-size: 30px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 600px) {
+//   .heading-box {
+//     color: red;
+//   }
+// }
+// /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+// @media (min-width: 768px) {
+// }
+// /* Large devices (desktops, 992px and up) */
+// @media (min-width: 992px) {
+// }
+// /* Extra large devices (large desktops, 1200px and up) */
+// @media (min-width: 1200px) {
+// }

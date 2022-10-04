@@ -1,0 +1,161 @@
+.fast-progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  padding: 3%;
+
+  .card {
+    width: 45%;
+    min-width: 280px;
+    // border: 2px solid red;
+    padding: 10px;
+    margin-right: 2.5%;
+    margin-bottom: 10%;
+  }
+
+  .fast-first {
+    h1 {
+      font-size: 48px;
+      font-family: "mulish-bold";
+
+      span {
+        font-size: 48px;
+        font-family: "mulish-bold";
+        border-bottom: 10px solid #ee325b39;
+      }
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: 24px;
+
+      span {
+        font-family: "mulish-extra-bold";
+      }
+    }
+  }
+
+  .fast-second {
+    .partners {
+      img {
+        width: 75%;
+        margin-left: 10%;
+      }
+    }
+
+    .points {
+      ul {
+        // border: 2px solid #ee325b39;
+        margin-top: 20px;
+        li {
+          list-style: none;
+          font-size: 18px;
+          font-family: "mulish-semi-bold";
+          margin: 20px;
+          display: flex;
+          align-items: center;
+
+          svg {
+            position: relative;
+            margin-right: 10px;
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .fast-third-motto {
+    p {
+      font-size: 22px;
+
+      span {
+        font-family: "mulish-black";
+      }
+    }
+  }
+
+  .fast-fourth-button {
+    .interested-in {
+      background-color: #ee325c;
+      color: #fff;
+      font-size: 20px;
+      font-family: "mulish-bold";
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      width: 380px;
+      height: 72px;
+      margin-left: 20px;
+      cursor: pointer;
+      transition: all 0.5s ease-out;
+      &:hover {
+        transform: scale(1.02);
+        background-color: #bb2748;
+      }
+    }
+  }
+
+  .quotation {
+    position: relative;
+    padding: 3%;
+    .quotation-text {
+      border: 2px solid #d6d8dd;
+      font-family: "mulish";
+      font-size: 16px;
+      line-height: 32px;
+      padding: 30px;
+      a {
+        font-size: 16px;
+        font-family: "mulish-bold";
+        color: #ee325c;
+        transition: all 0.5s ease-out;
+        cursor: pointer;
+
+        &:hover {
+          color: #bb2748;
+        }
+      }
+    }
+
+    .quotation-mark {
+      position: absolute;
+      top: 0px;
+      left: 45px;
+    }
+
+    .quotation-autor {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 64px;
+        margin-right: 30px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-family: "mulish-black";
+      }
+
+      p {
+        font-size: 16px;
+        font-family: "mulish";
+
+        a {
+          font-family: "mulish-bold";
+          color: #ee325c;
+          transition: all 0.5s ease-out;
+          cursor: pointer;
+          &:hover {
+            color: #bb2748;
+          }
+        }
+      }
+    }
+  }
+}
