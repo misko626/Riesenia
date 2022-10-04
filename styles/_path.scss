@@ -1,0 +1,65 @@
+.path {
+  //   background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .path-heading {
+    h1 {
+      font-size: 48px;
+      font-family: "mulish-bold";
+      max-width: 60%;
+      margin: auto;
+      margin-bottom: 50px;
+      span {
+        border-bottom: 10px solid #ee325b39;
+      }
+    }
+  }
+
+  .path-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    // border: 2px solid red;z
+
+    .second-step,
+    .fourth-step {
+      align-self: flex-end;
+    }
+
+    .path-item {
+      position: relative;
+      //   border: 2px solid red;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      margin-top: 30px;
+      .step-content {
+        max-width: 40%;
+        margin-right: 30px;
+        // border: 1px solid green;
+      }
+
+      .arrow {
+        position: relative;
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 75px;
+        }
+      }
+
+      .number-container {
+        margin-right: 40px;
+
+        svg {
+          width: 71px;
+        }
+      }
+    }
+  }
+}

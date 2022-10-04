@@ -105,6 +105,7 @@ header .button-box .interested-in:hover {
   width: 85%;
   margin: auto;
   padding: 3%;
+  padding-bottom: 0;
 }
 .fast-progress .card {
   width: 45%;
@@ -275,6 +276,122 @@ footer .contact-wrap .email:hover {
 footer svg {
   width: 275px;
   margin: 55px;
+}
+
+.path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.path .path-heading h1 {
+  font-size: 48px;
+  font-family: "mulish-bold";
+  max-width: 60%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.path .path-heading h1 span {
+  border-bottom: 10px solid rgba(238, 50, 91, 0.2235294118);
+}
+.path .path-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.path .path-steps .second-step,
+.path .path-steps .fourth-step {
+  align-self: flex-end;
+}
+.path .path-steps .path-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  margin-top: 30px;
+}
+.path .path-steps .path-item .step-content {
+  max-width: 40%;
+  margin-right: 30px;
+}
+.path .path-steps .path-item .arrow {
+  position: relative;
+}
+.path .path-steps .path-item .arrow svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+}
+.path .path-steps .path-item .number-container {
+  margin-right: 40px;
+}
+.path .path-steps .path-item .number-container svg {
+  width: 71px;
+}
+
+.focus {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border: 3px solid red;
+  width: 65%;
+  margin: auto;
+}
+.focus .focus-heading h1 {
+  font-size: 48px;
+  font-family: "mulish-bold";
+  max-width: 40%;
+  margin-bottom: 50px;
+}
+.focus .focus-container {
+  display: flex;
+  justify-content: space-between;
+}
+.focus .focus-container .interested-in {
+  background-color: #ee325c;
+  color: #fff;
+  font-size: 20px;
+  font-family: "mulish-bold";
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 380px;
+  height: 72px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.focus .focus-container .interested-in:hover {
+  transform: scale(1.02);
+  background-color: #bb2748;
+}
+.focus .focus-container .focus-text {
+  max-width: 35%;
+}
+.focus .focus-container .focus-text p {
+  font-size: 26px;
+  line-height: 40px;
+}
+.focus .focus-container .focus-text p span {
+  font-family: "mulish-extra-bold";
+}
+.focus .focus-container .focus-list ul {
+  margin-top: 20px;
+}
+.focus .focus-container .focus-list ul li {
+  list-style: none;
+  font-size: 18px;
+  font-family: "mulish-semi-bold";
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+.focus .focus-container .focus-list ul li svg {
+  position: relative;
+  margin-right: 10px;
+  width: 18px;
 }
 
 * {
