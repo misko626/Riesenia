@@ -1,22 +1,45 @@
 .focus {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  border: 3px solid red;
-  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   margin: auto;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  // border: 3px solid red;
 
   .focus-heading {
+    // border: 2px solid red;
     h1 {
+      max-width: 60%;
       font-size: 48px;
+      line-height: 64px;
       font-family: "mulish-bold";
-      max-width: 40%;
       margin-bottom: 50px;
+
+      span {
+        border-bottom: 10px solid #ee325b39;
+      }
+    }
+
+    @include mobile {
+      margin: auto;
+      padding: 0;
+      text-align: center;
+
+      h1 {
+        font-size: 32px;
+        min-width: 100%;
+        line-height: 44px;
+      }
     }
   }
 
   .focus-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     .interested-in {
       background-color: #ee325c;
       color: #fff;
@@ -25,7 +48,7 @@
       border: none;
       border-radius: 8px;
       padding: 10px 15px;
-      width: 380px;
+      width: 100%;
       height: 72px;
       margin-top: 30px;
       cursor: pointer;
@@ -34,27 +57,50 @@
         transform: scale(1.02);
         background-color: #bb2748;
       }
+
+      @include mobile {
+        margin: auto;
+      }
     }
 
     .focus-text {
-      max-width: 35%;
-
+      width: 50%;
+      min-width: 280px;
+      // border: 2px solid gray;
       p {
         font-size: 26px;
         line-height: 40px;
+
+        margin-bottom: 50px;
         span {
           font-family: "mulish-extra-bold";
+        }
+      }
+
+      @include mobile {
+        order: 1;
+        width: 100%;
+        padding: 30px;
+
+        p {
+          font-size: 22px;
+          line-height: 40px;
         }
       }
     }
 
     .focus-list {
+      padding: 30px;
+      padding-top: 0;
+      width: 50%;
+      min-width: 280px;
       ul {
         // border: 2px solid #ee325b39;
-        margin-top: 20px;
+        margin-top: 60px;
         li {
           list-style: none;
           font-size: 18px;
+          line-height: 27px;
           font-family: "mulish-semi-bold";
           margin: 20px;
           display: flex;
@@ -63,9 +109,26 @@
           svg {
             position: relative;
             margin-right: 10px;
-            width: 18px;
+            width: 24px;
           }
         }
+      }
+
+      @include mobile {
+        order: 0;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    @include desktop {
+      flex-direction: column;
+      .focus-list {
+        min-width: 100%;
+      }
+
+      .focus-text {
+        min-width: 100%;
       }
     }
   }

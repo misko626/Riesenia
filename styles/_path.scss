@@ -15,6 +15,18 @@
         border-bottom: 10px solid #ee325b39;
       }
     }
+
+    @include mobile {
+      margin-top: 50px;
+      text-align: left;
+
+      h1 {
+        min-width: 90%;
+        padding-right: 30px;
+        font-size: 32px;
+        line-height: 44px;
+      }
+    }
   }
 
   .path-steps {

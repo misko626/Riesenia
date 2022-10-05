@@ -23,6 +23,7 @@
   src: url("../Mulish/static/Mulish-Black.ttf") format("truetype");
 }
 header {
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -49,11 +50,13 @@ header .heading-box h1 {
   color: #fff;
   font-size: 50px;
   max-width: 700px;
-  font-family: "mulish-extra-bold";
+  font-family: "mulish-black";
+  line-height: 80px;
 }
 @media (max-width: 576px) {
   header .heading-box h1 {
     font-size: 30px;
+    line-height: 40px;
   }
 }
 header .logo-box,
@@ -66,6 +69,12 @@ header .logo-box {
 }
 header .logo-box .logo-svg {
   width: 144px;
+}
+@media (max-width: 576px) {
+  header .logo-box {
+    top: 3%;
+    left: 5%;
+  }
 }
 header .button-box {
   top: 10%;
@@ -84,10 +93,11 @@ header .button-box .interested-in {
   background-color: #ee325c;
   color: #fff;
   font-size: 14px;
-  font-family: "mulish-extra-bold";
+  font-family: "mulish-black";
   border: none;
   border-radius: 8px;
-  padding: 10px 15px;
+  padding: 0px 15px;
+  line-height: 50px;
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
@@ -102,44 +112,93 @@ header .button-box .interested-in:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 85%;
   margin: auto;
-  padding: 3%;
-  padding-bottom: 0;
+  padding-top: 3%;
 }
 .fast-progress .card {
-  width: 45%;
+  width: 50%;
   min-width: 280px;
-  padding: 10px;
-  margin-right: 2.5%;
+  padding: 30px;
   margin-bottom: 10%;
+}
+@media (max-width: 800px) {
+  .fast-progress .card {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .fast-progress .card {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
+}
+.fast-progress .partners-mobile {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
+}
+.fast-progress .partners-mobile img {
+  width: 90%;
+}
+@media (max-width: 576px) {
+  .fast-progress .partners-mobile {
+    display: block;
+  }
 }
 .fast-progress .fast-first h1 {
   font-size: 48px;
   font-family: "mulish-bold";
+  line-height: 64px;
+}
+@media (max-width: 576px) {
+  .fast-progress .fast-first h1 {
+    font-size: 32px;
+    line-height: 44px;
+  }
 }
 .fast-progress .fast-first h1 span {
-  font-size: 48px;
-  font-family: "mulish-bold";
   border-bottom: 10px solid rgba(238, 50, 91, 0.2235294118);
 }
 .fast-progress .fast-first p {
   margin-top: 30px;
   font-size: 24px;
+  line-height: 40px;
+}
+@media (max-width: 576px) {
+  .fast-progress .fast-first p {
+    font-size: 20px;
+  }
 }
 .fast-progress .fast-first p span {
   font-family: "mulish-extra-bold";
 }
+.fast-progress .fast-second {
+  padding-top: 5%;
+}
 .fast-progress .fast-second .partners img {
   width: 75%;
-  margin-left: 10%;
+  margin-left: 7%;
+}
+@media (max-width: 576px) {
+  .fast-progress .fast-second .partners img {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .fast-progress .fast-second {
+    padding: 0;
+  }
 }
 .fast-progress .fast-second .points ul {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .fast-progress .fast-second .points ul li {
   list-style: none;
   font-size: 18px;
+  line-height: 27px;
   font-family: "mulish-semi-bold";
   margin: 20px;
   display: flex;
@@ -148,10 +207,11 @@ header .button-box .interested-in:hover {
 .fast-progress .fast-second .points ul li svg {
   position: relative;
   margin-right: 10px;
-  width: 18px;
+  width: 24px;
 }
 .fast-progress .fast-third-motto p {
   font-size: 22px;
+  line-height: 40px;
 }
 .fast-progress .fast-third-motto p span {
   font-family: "mulish-black";
@@ -160,11 +220,12 @@ header .button-box .interested-in:hover {
   background-color: #ee325c;
   color: #fff;
   font-size: 20px;
+  line-height: 52px;
   font-family: "mulish-bold";
   border: none;
   border-radius: 8px;
-  padding: 10px 15px;
-  width: 380px;
+  padding: 10px 10px;
+  width: 100%;
   height: 72px;
   margin-left: 20px;
   cursor: pointer;
@@ -174,11 +235,18 @@ header .button-box .interested-in:hover {
   transform: scale(1.02);
   background-color: #bb2748;
 }
+@media (max-width: 576px) {
+  .fast-progress .fast-fourth-button .interested-in {
+    margin: auto;
+    max-width: 100%;
+  }
+}
 .fast-progress .quotation {
   position: relative;
   padding: 3%;
 }
 .fast-progress .quotation .quotation-text {
+  position: relative;
   border: 2px solid #d6d8dd;
   font-family: "mulish";
   font-size: 16px;
@@ -195,10 +263,16 @@ header .button-box .interested-in:hover {
 .fast-progress .quotation .quotation-text a:hover {
   color: #bb2748;
 }
+@media (max-width: 576px) {
+  .fast-progress .quotation {
+    max-width: 90%;
+    margin-top: 50px;
+  }
+}
 .fast-progress .quotation .quotation-mark {
   position: absolute;
-  top: 0px;
-  left: 45px;
+  top: -25px;
+  left: 25px;
 }
 .fast-progress .quotation .quotation-autor {
   margin-top: 30px;
@@ -211,6 +285,7 @@ header .button-box .interested-in:hover {
 }
 .fast-progress .quotation .quotation-autor h3 {
   font-size: 16px;
+  line-height: 22px;
   font-family: "mulish-black";
 }
 .fast-progress .quotation .quotation-autor p {
@@ -241,20 +316,45 @@ footer {
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 576px) {
+  footer {
+    height: 450px;
+  }
+}
 footer h1 {
   font-size: 48px;
+  line-height: 59px;
   color: #fff;
   font-family: "mulish-black";
   margin: 55px;
   max-width: 42%;
 }
+@media (max-width: 576px) {
+  footer h1 {
+    font-size: 24px;
+    line-height: 34px;
+    max-width: 50%;
+    margin: 30px;
+  }
+}
 footer .contact-wrap {
   margin: 55px;
+}
+@media (max-width: 576px) {
+  footer .contact-wrap {
+    margin: 30px;
+  }
 }
 footer .contact-wrap a {
   text-decoration: none;
   font-size: 30px;
   font-family: "mulish-bold";
+}
+@media (max-width: 576px) {
+  footer .contact-wrap a {
+    font-size: 22px;
+    line-height: 40px;
+  }
 }
 footer .contact-wrap .tel {
   color: #fff;
@@ -277,6 +377,12 @@ footer svg {
   width: 275px;
   margin: 55px;
 }
+@media (max-width: 576px) {
+  footer svg {
+    width: 145px;
+    margin: 30px;
+  }
+}
 
 .path {
   display: flex;
@@ -293,6 +399,18 @@ footer svg {
 }
 .path .path-heading h1 span {
   border-bottom: 10px solid rgba(238, 50, 91, 0.2235294118);
+}
+@media (max-width: 576px) {
+  .path .path-heading {
+    margin-top: 50px;
+    text-align: left;
+  }
+  .path .path-heading h1 {
+    min-width: 90%;
+    padding-right: 30px;
+    font-size: 32px;
+    line-height: 44px;
+  }
 }
 .path .path-steps {
   display: flex;
@@ -333,21 +451,41 @@ footer svg {
 }
 
 .focus {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  border: 3px solid red;
-  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   margin: auto;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 .focus .focus-heading h1 {
+  max-width: 60%;
   font-size: 48px;
+  line-height: 64px;
   font-family: "mulish-bold";
-  max-width: 40%;
   margin-bottom: 50px;
+}
+.focus .focus-heading h1 span {
+  border-bottom: 10px solid rgba(238, 50, 91, 0.2235294118);
+}
+@media (max-width: 576px) {
+  .focus .focus-heading {
+    margin: auto;
+    padding: 0;
+    text-align: center;
+  }
+  .focus .focus-heading h1 {
+    font-size: 32px;
+    min-width: 100%;
+    line-height: 44px;
+  }
 }
 .focus .focus-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 .focus .focus-container .interested-in {
   background-color: #ee325c;
@@ -357,7 +495,7 @@ footer svg {
   border: none;
   border-radius: 8px;
   padding: 10px 15px;
-  width: 380px;
+  width: 100%;
   height: 72px;
   margin-top: 30px;
   cursor: pointer;
@@ -367,22 +505,47 @@ footer svg {
   transform: scale(1.02);
   background-color: #bb2748;
 }
+@media (max-width: 576px) {
+  .focus .focus-container .interested-in {
+    margin: auto;
+  }
+}
 .focus .focus-container .focus-text {
-  max-width: 35%;
+  width: 50%;
+  min-width: 280px;
 }
 .focus .focus-container .focus-text p {
   font-size: 26px;
   line-height: 40px;
+  margin-bottom: 50px;
 }
 .focus .focus-container .focus-text p span {
   font-family: "mulish-extra-bold";
 }
+@media (max-width: 576px) {
+  .focus .focus-container .focus-text {
+    order: 1;
+    width: 100%;
+    padding: 30px;
+  }
+  .focus .focus-container .focus-text p {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+.focus .focus-container .focus-list {
+  padding: 30px;
+  padding-top: 0;
+  width: 50%;
+  min-width: 280px;
+}
 .focus .focus-container .focus-list ul {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .focus .focus-container .focus-list ul li {
   list-style: none;
   font-size: 18px;
+  line-height: 27px;
   font-family: "mulish-semi-bold";
   margin: 20px;
   display: flex;
@@ -391,7 +554,25 @@ footer svg {
 .focus .focus-container .focus-list ul li svg {
   position: relative;
   margin-right: 10px;
-  width: 18px;
+  width: 24px;
+}
+@media (max-width: 576px) {
+  .focus .focus-container .focus-list {
+    order: 0;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 992px) {
+  .focus .focus-container {
+    flex-direction: column;
+  }
+  .focus .focus-container .focus-list {
+    min-width: 100%;
+  }
+  .focus .focus-container .focus-text {
+    min-width: 100%;
+  }
 }
 
 * {
@@ -403,4 +584,19 @@ footer svg {
 
 body {
   min-width: 320px;
+  max-width: 100%;
+}
+body main {
+  margin: auto;
+  width: 70%;
+}
+@media (max-width: 800px) {
+  body main {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  body main {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

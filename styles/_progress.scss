@@ -3,28 +3,54 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 85%;
   margin: auto;
-  padding: 3%;
-  padding-bottom: 0;
+  padding-top: 3%;
 
   .card {
-    width: 45%;
+    width: 50%;
     min-width: 280px;
-    // border: 2px solid red;
-    padding: 10px;
-    margin-right: 2.5%;
+    // border: 2px solid gray;
+    padding: 30px;
     margin-bottom: 10%;
+
+    @include tablet {
+      width: 100%;
+      min-width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+      min-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .partners-mobile {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    img {
+      width: 90%;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   .fast-first {
     h1 {
       font-size: 48px;
       font-family: "mulish-bold";
+      line-height: 64px;
+
+      @include mobile {
+        font-size: 32px;
+        line-height: 44px;
+      }
 
       span {
-        font-size: 48px;
-        font-family: "mulish-bold";
         border-bottom: 10px solid #ee325b39;
       }
     }
@@ -32,6 +58,11 @@
     p {
       margin-top: 30px;
       font-size: 24px;
+      line-height: 40px;
+
+      @include mobile {
+        font-size: 20px;
+      }
 
       span {
         font-family: "mulish-extra-bold";
@@ -40,20 +71,28 @@
   }
 
   .fast-second {
+    padding-top: 5%;
     .partners {
       img {
         width: 75%;
-        margin-left: 10%;
+        margin-left: 7%;
+        @include mobile {
+          display: none;
+        }
       }
+    }
+    @include mobile {
+      padding: 0;
     }
 
     .points {
       ul {
         // border: 2px solid #ee325b39;
-        margin-top: 20px;
+        margin-top: 60px;
         li {
           list-style: none;
           font-size: 18px;
+          line-height: 27px;
           font-family: "mulish-semi-bold";
           margin: 20px;
           display: flex;
@@ -62,7 +101,7 @@
           svg {
             position: relative;
             margin-right: 10px;
-            width: 18px;
+            width: 24px;
           }
         }
       }
@@ -72,6 +111,7 @@
   .fast-third-motto {
     p {
       font-size: 22px;
+      line-height: 40px;
 
       span {
         font-family: "mulish-black";
@@ -84,11 +124,12 @@
       background-color: #ee325c;
       color: #fff;
       font-size: 20px;
+      line-height: 52px;
       font-family: "mulish-bold";
       border: none;
       border-radius: 8px;
-      padding: 10px 15px;
-      width: 380px;
+      padding: 10px 10px;
+      width: 100%;
       height: 72px;
       margin-left: 20px;
       cursor: pointer;
@@ -97,13 +138,20 @@
         transform: scale(1.02);
         background-color: #bb2748;
       }
+
+      @include mobile {
+        margin: auto;
+        max-width: 100%;
+      }
     }
   }
 
   .quotation {
     position: relative;
     padding: 3%;
+
     .quotation-text {
+      position: relative;
       border: 2px solid #d6d8dd;
       font-family: "mulish";
       font-size: 16px;
@@ -122,10 +170,15 @@
       }
     }
 
+    @include mobile {
+      max-width: 90%;
+      margin-top: 50px;
+    }
+
     .quotation-mark {
       position: absolute;
-      top: 0px;
-      left: 45px;
+      top: -25px;
+      left: 25px;
     }
 
     .quotation-autor {
@@ -140,6 +193,7 @@
 
       h3 {
         font-size: 16px;
+        line-height: 22px;
         font-family: "mulish-black";
       }
 
