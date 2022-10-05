@@ -1,0 +1,114 @@
+.form-shaddow {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.795);
+  align-items: center;
+  justify-content: center;
+
+  .form-container {
+    position: relative;
+    width: auto;
+    max-width: 550px;
+    height: 80vh;
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      line-height: 44px;
+      font-family: "mulish-black";
+      max-width: 80%;
+    }
+
+    svg {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      transition: all 0.2s ease-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.12);
+      }
+    }
+
+    .contact-us {
+      background-color: #ee325c;
+      color: #fff;
+      font-size: 20px;
+      line-height: 52px;
+      font-family: "mulish-bold";
+      border: none;
+      border-radius: 8px;
+      padding: 10px 10px;
+      width: 70%;
+      height: 72px;
+      cursor: pointer;
+      transition: all 0.5s ease-out;
+      &:hover {
+        transform: scale(1.02);
+        background-color: #bb2748;
+      }
+
+      @include mobile {
+        margin: auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.active {
+  display: flex;
+}
+
+.form-wrap {
+  margin-top: 35px;
+
+  .input-grp {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-wrap {
+    margin-bottom: 15px;
+
+    input {
+      width: 100%;
+      border-radius: 3px;
+      border: none;
+      padding: 10px;
+      outline: none;
+      background-color: #efefef;
+      transition: all 0.5s ease-out;
+      height: 55px;
+      &:focus {
+        transform: scale(1.05);
+        background-color: #efefef;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 3px;
+      color: #060606;
+      font-size: 16px;
+      font-family: "mulish-black";
+      margin-bottom: 10px;
+    }
+
+    .message-input {
+      background-color: #efefef;
+      border: none;
+    }
+  }
+}

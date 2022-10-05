@@ -9,6 +9,7 @@
 @import "footer";
 @import "path";
 @import "focus";
+@import "form";
 
 * {
   margin: 0;
@@ -20,6 +21,7 @@
 body {
   min-width: 320px;
   max-width: 100%;
+  position: relative;
 
   main {
     margin: auto;

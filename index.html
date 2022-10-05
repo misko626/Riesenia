@@ -43,7 +43,9 @@
 
       <!-- button -->
       <div class="button-box">
-        <button class="interested-in">Mám záujem o UX audit</button>
+        <button class="interested-in" onclick="openForm()">
+          Mám záujem o UX audit
+        </button>
       </div>
 
       <div class="heading-box">
@@ -163,7 +165,9 @@
           </p>
         </div>
         <div class="fast-fourth-button card">
-          <button class="interested-in">Mám záujem o UX audit</button>
+          <button class="interested-in" onclick="openForm()">
+            Mám záujem o UX audit
+          </button>
         </div>
 
         <div class="fast-fifth quotation card">
@@ -538,7 +542,9 @@
               <span>pomocou UX auditu.</span>
             </p>
 
-            <button class="interested-in">Mám záujem o UX audit</button>
+            <button class="interested-in" onclick="openForm()">
+              Mám záujem o UX audit
+            </button>
           </div>
           <div class="focus-list">
             <ul>
@@ -688,6 +694,63 @@
       </svg>
     </footer>
 
+    <!-- form -->
+
+    <div class="form-shaddow active">
+      <div class="form-container">
+        <svg
+          id="close_concact_form"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="40" height="40" rx="20" fill="#EE325C" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.996 14.3681C13.5645 14.7927 13.5645 15.4884 13.996 15.913L18.4166 20.2627L13.996 24.6123C13.5645 25.0369 13.5645 25.7326 13.996 26.1572C14.4178 26.5722 15.0944 26.5722 15.5161 26.1572L19.9617 21.783L24.4072 26.1572C24.829 26.5722 25.5056 26.5722 25.9273 26.1572C26.3588 25.7326 26.3588 25.0369 25.9273 24.6123L21.5068 20.2627L25.9273 15.913C26.3588 15.4884 26.3588 14.7927 25.9273 14.3681C25.5056 13.9531 24.829 13.9531 24.4072 14.3681L19.9617 18.7423L15.5161 14.3681C15.0944 13.9531 14.4178 13.9531 13.996 14.3681Z"
+            fill="white"
+          />
+        </svg>
+
+        <h1>Jednoducho nám napíšte a my sa vám ozveme.</h1>
+
+        <form>
+          <div class="form-wrap">
+            <div class="input-wrap">
+              <label for="name" required>Meno *</label>
+              <input type="text" id="name" />
+            </div>
+            <div class="input-grp">
+              <div class="input-wrap">
+                <label for="email" required>Email *</label>
+                <input type="email" id="email" />
+              </div>
+              <div class="input-wrap">
+                <label for="tel">Tel. číslo</label>
+                <input type="text " id="tel" />
+              </div>
+            </div>
+
+            <div class="input-wrap">
+              <label for="web">Webstránka</label>
+              <input type="text" id="wev" />
+            </div>
+            <div class="input-wrap">
+              <label for="message">Poznámka:</label>
+              <textarea class="message-input" id="message" cols="50" rows="5"></textarea>
+            </div>
+            <div class="input-wrap">
+              <input type="submit" value="Kontaktujte ma" class="contact-us" />
+            </div>
+          </div>
+        </form>
+        <!--  -->
+        <!-- <button class="contact-us">Kontaktujte ma</button> -->
+      </div>
+    </div>
     <script src="./js/script.js"></script>
   </body>
 </html>
