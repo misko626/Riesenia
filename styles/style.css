@@ -45,6 +45,10 @@ header {
 header .heading-box {
   max-width: 700px;
   margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  -webkit-animation: welcome-heading-appear 2s forwards 1s;
+          animation: welcome-heading-appear 2s forwards 1s;
 }
 header .heading-box h1 {
   color: #fff;
@@ -66,6 +70,10 @@ header .button-box {
 header .logo-box {
   top: 10%;
   left: 15%;
+  transform: translateX(-20px);
+  opacity: 0;
+  -webkit-animation: welcome-logo-appear 2s forwards 3s;
+          animation: welcome-logo-appear 2s forwards 3s;
 }
 header .logo-box .logo-svg {
   width: 144px;
@@ -79,6 +87,9 @@ header .logo-box .logo-svg {
 header .button-box {
   top: 10%;
   right: 15%;
+  opacity: 0;
+  -webkit-animation: welcome-button-appear 2s forwards 3s;
+          animation: welcome-button-appear 2s forwards 3s;
 }
 @media (max-width: 576px) {
   header .button-box {
@@ -106,7 +117,41 @@ header .button-box .interested-in:hover {
   background-color: #bb2748;
 }
 
-/* Small devices (landscape phones, 576px and up) */
+@-webkit-keyframes welcome-heading-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes welcome-heading-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes welcome-logo-appear {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes welcome-logo-appear {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes welcome-button-appear {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes welcome-button-appear {
+  to {
+    opacity: 1;
+  }
+}
 .fast-progress {
   display: flex;
   flex-wrap: wrap;
@@ -120,6 +165,8 @@ header .button-box .interested-in:hover {
   min-width: 280px;
   padding: 30px;
   margin-bottom: 10%;
+  opacity: 0;
+  transition: all 2s ease-out;
 }
 @media (max-width: 800px) {
   .fast-progress .card {
@@ -302,6 +349,10 @@ header .button-box .interested-in:hover {
   color: #bb2748;
 }
 
+.appear-element {
+  opacity: 1 !important;
+}
+
 footer {
   left: 0;
   right: 0;
@@ -415,12 +466,26 @@ footer svg {
 .path .path-steps {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 80%;
+  align-items: flex-start;
+  width: 100%;
 }
 .path .path-steps .second-step,
 .path .path-steps .fourth-step {
   align-self: flex-end;
+  padding-left: 40px;
+}
+.path .path-steps .fourth-step {
+  padding-left: 100px;
+}
+@media (max-width: 800px) {
+  .path .path-steps {
+    align-items: center;
+  }
+  .path .path-steps .second-step,
+.path .path-steps .fourth-step {
+    align-self: none;
+    padding-left: 0px;
+  }
 }
 .path .path-steps .path-item {
   position: relative;
@@ -428,11 +493,43 @@ footer svg {
   flex-direction: row;
   align-items: center;
   text-align: left;
-  margin-top: 30px;
+  margin-top: 50px;
+  width: auto;
+  max-width: 60%;
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+@media (max-width: 800px) {
+  .path .path-steps .path-item {
+    width: 100%;
+    max-width: 100%;
+  }
+  .path .path-steps .path-item .arrow svg {
+    display: none;
+  }
+  .path .path-steps .path-item .arrow-second svg {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .path .path-steps .path-item {
+    padding: 0 20px;
+  }
 }
 .path .path-steps .path-item .step-content {
-  max-width: 40%;
+  max-width: 70%;
   margin-right: 30px;
+}
+.path .path-steps .path-item .step-content h3 {
+  font-size: 24px;
+  font-family: "mulish-black";
+  margin-bottom: 5px;
+}
+.path .path-steps .path-item .step-content p {
+  font-size: 16px;
+}
+.path .path-steps .path-item .step-content p span {
+  font-family: "mulish-bold";
 }
 .path .path-steps .path-item .arrow {
   position: relative;
@@ -450,6 +547,10 @@ footer svg {
   width: 71px;
 }
 
+.appear-element {
+  opacity: 1;
+}
+
 .focus {
   display: flex;
   justify-content: flex-start;
@@ -458,6 +559,8 @@ footer svg {
   margin: auto;
   padding-top: 50px;
   padding-bottom: 100px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
 .focus .focus-heading h1 {
   max-width: 60%;
@@ -575,6 +678,10 @@ footer svg {
   }
 }
 
+.appear-element {
+  opacity: 1;
+}
+
 .form-shaddow {
   position: fixed;
   display: none;
@@ -586,24 +693,37 @@ footer svg {
   justify-content: center;
 }
 .form-shaddow .form-container {
-  position: relative;
+  position: absolute;
+  padding: 40px 0;
   width: auto;
   max-width: 550px;
-  height: 80vh;
+  height: auto;
   background-color: #fff;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+@media (max-width: 576px) {
+  .form-shaddow .form-container {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 .form-shaddow .form-container h1 {
   text-align: center;
   font-size: 30px;
   line-height: 44px;
   font-family: "mulish-black";
-  max-width: 80%;
+  max-width: 70%;
+}
+@media (max-width: 576px) {
+  .form-shaddow .form-container h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
 }
 .form-shaddow .form-container svg {
   position: absolute;
@@ -624,7 +744,7 @@ footer svg {
   border: none;
   border-radius: 8px;
   padding: 10px 10px;
-  width: 70%;
+  width: 100%;
   height: 72px;
   cursor: pointer;
   transition: all 0.5s ease-out;
@@ -636,7 +756,6 @@ footer svg {
 @media (max-width: 576px) {
   .form-shaddow .form-container .contact-us {
     margin: auto;
-    max-width: 100%;
   }
 }
 
@@ -646,6 +765,12 @@ footer svg {
 
 .form-wrap {
   margin-top: 35px;
+  width: auto;
+}
+@media (max-width: 576px) {
+  .form-wrap {
+    width: 100%;
+  }
 }
 .form-wrap .input-grp {
   display: flex;
@@ -653,6 +778,12 @@ footer svg {
 }
 .form-wrap .input-wrap {
   margin-bottom: 15px;
+  padding: 0 40px;
+}
+@media (max-width: 576px) {
+  .form-wrap .input-wrap {
+    padding: 0 10px;
+  }
 }
 .form-wrap .input-wrap input {
   width: 100%;
@@ -676,9 +807,19 @@ footer svg {
   font-family: "mulish-black";
   margin-bottom: 10px;
 }
+.form-wrap .input-wrap label span {
+  color: #bb2748;
+  font-family: "mulish-black";
+}
 .form-wrap .input-wrap .message-input {
+  width: 100%;
+  height: 110px;
   background-color: #efefef;
   border: none;
+  font-size: 16px;
+  color: #060606;
+  padding: 10px;
+  resize: none;
 }
 
 * {

@@ -9,25 +9,37 @@
   justify-content: center;
 
   .form-container {
-    position: relative;
+    position: absolute;
+    padding: 40px 0;
     width: auto;
     max-width: 550px;
-    height: 80vh;
+    height: auto;
     background-color: #fff;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
-      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
+    @include mobile {
+      // background-color: #bb2748;
+      width: 100vw;
+      height: 100vh;
+    }
 
     h1 {
       text-align: center;
       font-size: 30px;
       line-height: 44px;
       font-family: "mulish-black";
-      max-width: 80%;
+      max-width: 70%;
+
+      @include mobile {
+        font-size: 22px;
+        line-height: 30px;
+      }
     }
 
     svg {
@@ -50,7 +62,7 @@
       border: none;
       border-radius: 8px;
       padding: 10px 10px;
-      width: 70%;
+      width: 100%;
       height: 72px;
       cursor: pointer;
       transition: all 0.5s ease-out;
@@ -61,7 +73,6 @@
 
       @include mobile {
         margin: auto;
-        max-width: 100%;
       }
     }
   }
@@ -73,6 +84,13 @@
 
 .form-wrap {
   margin-top: 35px;
+  width: auto;
+
+  // border: 2px solid gray;
+
+  @include mobile {
+    width: 100%;
+  }
 
   .input-grp {
     display: flex;
@@ -81,6 +99,11 @@
 
   .input-wrap {
     margin-bottom: 15px;
+    padding: 0 40px;
+
+    @include mobile {
+      padding: 0 10px;
+    }
 
     input {
       width: 100%;
@@ -104,11 +127,22 @@
       font-size: 16px;
       font-family: "mulish-black";
       margin-bottom: 10px;
+
+      span {
+        color: #bb2748;
+        font-family: "mulish-black";
+      }
     }
 
     .message-input {
+      width: 100%;
+      height: 110px;
       background-color: #efefef;
       border: none;
+      font-size: 16px;
+      color: #060606;
+      padding: 10px;
+      resize: none;
     }
   }
 }

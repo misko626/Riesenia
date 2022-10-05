@@ -25,6 +25,9 @@ header {
   .heading-box {
     max-width: 700px;
     margin: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: welcome-heading-appear 2s forwards 1s;
     h1 {
       color: #fff;
       font-size: 50px;
@@ -47,6 +50,9 @@ header {
   .logo-box {
     top: 10%;
     left: 15%;
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: welcome-logo-appear 2s forwards 3s;
 
     .logo-svg {
       width: 144px;
@@ -61,6 +67,8 @@ header {
   .button-box {
     top: 10%;
     right: 15%;
+    opacity: 0;
+    animation: welcome-button-appear 2s forwards 3s;
     @include mobile {
       top: 80%;
       left: 50%;
@@ -88,26 +96,22 @@ header {
   }
 }
 
-/* Small devices (landscape phones, 576px and up) */
-// @media (max-width: 576px) {
-//   .heading-box {
-//     h1 {
-//       font-size: 30px;
-//     }
-//   }
-// }
+@keyframes welcome-heading-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
-// @media screen and (max-width: 600px) {
-//   .heading-box {
-//     color: red;
-//   }
-// }
-// /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-// @media (min-width: 768px) {
-// }
-// /* Large devices (desktops, 992px and up) */
-// @media (min-width: 992px) {
-// }
-// /* Extra large devices (large desktops, 1200px and up) */
-// @media (min-width: 1200px) {
-// }
+@keyframes welcome-logo-appear {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes welcome-button-appear {
+  to {
+    opacity: 1;
+  }
+}

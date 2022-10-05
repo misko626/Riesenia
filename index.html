@@ -59,7 +59,7 @@
         <div class="partners-mobile">
           <img src="./assets/sponsors.png" alt="sponzory" />
         </div>
-        <div class="fast-first card">
+        <div class="fast-first card ">
           <h1>Rýchle <span>výsledky</span> pomocou UX auditu.</h1>
           <p>
             UX auditom vášho riešenia lepšie pochopíte, ako vaši zákazníci
@@ -449,10 +449,11 @@
               </svg>
             </div>
             <div class="step-content">
-              <h3>Ciele auditu</h3>
+              <h3>Zbieranie dát</h3>
               <p>
-                Určíme si <span>spoločné ciele</span>, nastavíme očakávania a
-                definujeme <span>cieľovú skupinu a jej potreby.</span>
+                Zvolíme vhodné metodiky a nástroje na
+                <span>sledovanie správania používateľov a zbieranie dát.</span>
+              </p>
               </p>
             </div>
           </div>
@@ -475,10 +476,9 @@
               </svg>
             </div>
             <div class="step-content">
-              <h3>Ciele auditu</h3>
+              <h3>Vyhodnotenie</h3>
               <p>
-                Určíme si <span>spoločné ciele</span>, nastavíme očakávania a
-                definujeme <span>cieľovú skupinu a jej potreby.</span>
+                <span>Vyhodnotíme nazbierané dáta</span> , zosumarizujeme všetky naše zistenia a <span>navrhneme riešenia.</span>
               </p>
             </div>
             <div class="arrow">
@@ -522,10 +522,9 @@
               </svg>
             </div>
             <div class="step-content">
-              <h3>Ciele auditu</h3>
+              <h3>Výsledky auditu</h3>
               <p>
-                Určíme si <span>spoločné ciele</span>, nastavíme očakávania a
-                definujeme <span>cieľovú skupinu a jej potreby.</span>
+                <span>Osobná prezentácia výsledkov a navrhnutých riešení</span> s podrobnou dokumentáciou.
               </p>
             </div>
           </div>
@@ -696,7 +695,7 @@
 
     <!-- form -->
 
-    <div class="form-shaddow active">
+    <div class="form-shaddow">
       <div class="form-container">
         <svg
           id="close_concact_form"
@@ -720,27 +719,31 @@
         <form>
           <div class="form-wrap">
             <div class="input-wrap">
-              <label for="name" required>Meno *</label>
-              <input type="text" id="name" />
+              <label for="name" >Meno: <span>*</span></label>
+              <input type="text" id="name" required/>
             </div>
             <div class="input-grp">
               <div class="input-wrap">
-                <label for="email" required>Email *</label>
-                <input type="email" id="email" />
+                <label for="email" >Email: <span>*</span></label>
+                <input type="email" id="email" required/>
               </div>
               <div class="input-wrap">
-                <label for="tel">Tel. číslo</label>
+                <label for="tel">Tel. číslo:</label>
                 <input type="text " id="tel" />
               </div>
             </div>
 
             <div class="input-wrap">
-              <label for="web">Webstránka</label>
+              <label for="web">Webstránka:</label>
               <input type="text" id="wev" />
             </div>
             <div class="input-wrap">
               <label for="message">Poznámka:</label>
-              <textarea class="message-input" id="message" cols="50" rows="5"></textarea>
+              <textarea
+                class="message-input"
+                id="message"
+                placeholder=" Je niečo čo by ste sa nás chceli spýtat?"
+              ></textarea>
             </div>
             <div class="input-wrap">
               <input type="submit" value="Kontaktujte ma" class="contact-us" />

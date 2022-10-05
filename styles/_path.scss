@@ -32,27 +32,78 @@
   .path-steps {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 80%;
-    // border: 2px solid red;z
-
+    align-items: flex-start;
+    width: 100%;
+    // border: 2px solid red;
     .second-step,
     .fourth-step {
       align-self: flex-end;
+      padding-left: 40px;
+    }
+
+    .fourth-step {
+      padding-left: 100px;
+    }
+
+    @include tablet {
+      align-items: center;
+      .second-step,
+      .fourth-step {
+        align-self: none;
+        padding-left: 0px;
+      }
     }
 
     .path-item {
       position: relative;
-      //   border: 2px solid red;
+      // border: 2px solid red;
       display: flex;
       flex-direction: row;
       align-items: center;
       text-align: left;
-      margin-top: 30px;
+      margin-top: 50px;
+      width: auto;
+      max-width: 60%;
+      opacity: 0;
+      transition: all 2s ease-out;
+
+      @include tablet {
+        width: 100%;
+        max-width: 100%;
+
+        .arrow {
+          svg {
+            display: none;
+          }
+        }
+        .arrow-second {
+          svg {
+            display: none;
+          }
+        }
+      }
+
+      @include mobile {
+        padding: 0 20px;
+      }
+
       .step-content {
-        max-width: 40%;
+        max-width: 70%;
         margin-right: 30px;
         // border: 1px solid green;
+
+        h3 {
+          font-size: 24px;
+          font-family: "mulish-black";
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 16px;
+          span {
+            font-family: "mulish-bold";
+          }
+        }
       }
 
       .arrow {
@@ -74,4 +125,8 @@
       }
     }
   }
+}
+
+.appear-element {
+  opacity: 1;
 }

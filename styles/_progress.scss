@@ -12,6 +12,8 @@
     // border: 2px solid gray;
     padding: 30px;
     margin-bottom: 10%;
+    opacity: 0;
+    transition: all 2s ease-out;
 
     @include tablet {
       width: 100%;
@@ -213,4 +215,8 @@
       }
     }
   }
+}
+
+.appear-element {
+  opacity: 1 !important;
 }
