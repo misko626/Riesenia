@@ -25,9 +25,7 @@ header {
   .heading-box {
     max-width: 700px;
     margin: auto;
-    opacity: 0;
     transform: translateY(20px);
-    animation: welcome-heading-appear 2s forwards 1s;
     h1 {
       color: #fff;
       font-size: 50px;
@@ -52,9 +50,9 @@ header {
     left: 15%;
     transform: translateX(-20px);
     opacity: 0;
-    animation: welcome-logo-appear 2s forwards 3s;
+    animation: welcome-logo-appear 1s forwards 2s;
 
-    .logo-svg {
+    .logo-logo {
       width: 144px;
     }
 
@@ -68,7 +66,7 @@ header {
     top: 10%;
     right: 15%;
     opacity: 0;
-    animation: welcome-button-appear 2s forwards 3s;
+    animation: welcome-button-appear 1s forwards 2s;
     @include mobile {
       top: 80%;
       left: 50%;
@@ -93,13 +91,6 @@ header {
         background-color: #bb2748;
       }
     }
-  }
-}
-
-@keyframes welcome-heading-appear {
-  to {
-    opacity: 1;
-    transform: translateY(0px);
   }
 }
 

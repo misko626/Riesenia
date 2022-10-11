@@ -5,14 +5,18 @@
   align-items: center;
   text-align: center;
   .path-heading {
-    h1 {
+    h2 {
       font-size: 48px;
       font-family: "mulish-bold";
       max-width: 60%;
       margin: auto;
       margin-bottom: 50px;
-      span {
+      bold {
         border-bottom: 10px solid #ee325b39;
+      }
+
+      @include desktop {
+        max-width: 80%;
       }
     }
 
@@ -20,7 +24,7 @@
       margin-top: 50px;
       text-align: left;
 
-      h1 {
+      h2 {
         min-width: 90%;
         padding-right: 30px;
         font-size: 32px;
@@ -30,6 +34,7 @@
   }
 
   .path-steps {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -39,10 +44,6 @@
     .fourth-step {
       align-self: flex-end;
       padding-left: 40px;
-    }
-
-    .fourth-step {
-      padding-left: 100px;
     }
 
     @include tablet {
@@ -72,12 +73,12 @@
         max-width: 100%;
 
         .arrow {
-          svg {
+          img {
             display: none;
           }
         }
         .arrow-second {
-          svg {
+          img {
             display: none;
           }
         }
@@ -100,7 +101,7 @@
 
         p {
           font-size: 16px;
-          span {
+          bold {
             font-family: "mulish-bold";
           }
         }
@@ -108,7 +109,7 @@
 
       .arrow {
         position: relative;
-        svg {
+        img {
           position: absolute;
           top: 0;
           left: 0;
@@ -116,11 +117,19 @@
         }
       }
 
+      .arrow-second {
+        position: absolute;
+        left: -75px;
+        top: 35px;
+      }
+
       .number-container {
         margin-right: 40px;
 
-        svg {
-          width: 71px;
+        img {
+          height: 71px;
+          margin: 0;
+          padding: 0;
         }
       }
     }
